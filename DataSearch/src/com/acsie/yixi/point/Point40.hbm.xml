@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+	<hibernate-mapping>
+	<class name="com.acsie.yixi.point.Point40" table="tv40" lazy="false">
+			<composite-id>
+				<key-property name="ID"  column="id"></key-property>
+				<key-property name="date" column="clock" type="timestamp"></key-property>
+			</composite-id>
+			<property name="value" column="val"></property>
+			<many-to-one name="tag" class="com.acsie.yixi.entity.Tag" column="id" insert="false" update="false"></many-to-one>
+		</class>
+	</hibernate-mapping>

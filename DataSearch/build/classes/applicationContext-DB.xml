@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"  
+   	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+   						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+   						
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"  
+        destroy-method="close">  
+        <property name="driverClass">  
+            <value>oracle.jdbc.driver.OracleDriver</value>  
+        </property>  
+        <property name="jdbcUrl">  
+            <value>jdbc:oracle:thin:@localhost:1521:orcl</value>  
+        </property>  
+        <property name="user">  
+            <value>temp</value>  
+        </property>  
+        <property name="password">  
+            <value>admin_123</value>  
+        </property>  
+        <property name="maxPoolSize">  
+            <value>80</value>  
+        </property>  
+        <property name="minPoolSize">  
+            <value>1</value>  
+        </property>  
+        <property name="initialPoolSize">  
+            <value>1</value>  
+        </property>  
+        <property name="maxIdleTime">  
+            <value>20</value>  
+        </property>  
+    </bean>  
+  
+    <!--定义Hibernate的SessionFactory -->  
+    <!-- SessionFactory使用的数据源为上面的数据源 -->  
+    <!-- 指定了Hibernate的映射文件和配置信息 -->  
+    <bean id="sessionFactory"  
+        class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+        <property name="dataSource">  
+            <ref local="dataSource" />  
+        </property>  
+        <property name="mappingResources">  
+            <list>
+				<value>com/acsie/yixi/point/Point1.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point2.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point3.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point4.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point5.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point6.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point7.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point8.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point9.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point10.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point11.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point12.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point13.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point14.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point15.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point16.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point17.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point18.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point19.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point20.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point21.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point22.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point23.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point24.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point25.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point26.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point27.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point28.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point29.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point30.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point31.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point32.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point33.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point34.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point35.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point36.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point37.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point38.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point39.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point40.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point41.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point42.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point43.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point44.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point45.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point46.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point47.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point48.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point49.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point50.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point51.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point52.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point53.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point54.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point55.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point56.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point57.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point58.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point59.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point60.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point61.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point62.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point63.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point64.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point65.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point66.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point67.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point68.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point69.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point70.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point71.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point72.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point73.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point74.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point75.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point76.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point77.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point78.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point79.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point80.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point81.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point82.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point83.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point84.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point85.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point86.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point87.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point88.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point89.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point90.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point91.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point92.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point93.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point94.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point95.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point96.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point97.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point98.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point99.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point100.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point101.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point102.hbm.xml</value>
+				<value>com/acsie/yixi/point/Point103.hbm.xml</value>
+
+                <value>com/acsie/yixi/entity/Tag.hbm.xml</value> 
+               
+            </list>  
+        </property>  
+        <property name="hibernateProperties">  
+            <props>  
+                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>  
+                <prop key="show_sql">true</prop>  
+                <prop key="hibernate.jdbc.batch_size">20</prop>  
+            </props>  
+        </property>  
+    </bean>  
+  
+    <bean id="transactionManager"  
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager">  
+        <property name="sessionFactory" ref="sessionFactory" />  
+    </bean>
+</beans>

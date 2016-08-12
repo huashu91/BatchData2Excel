@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 		struts公用 -->
+		<include file="struts-PEEMES-default.xml" />
+		<package name="check" extends="struts-default,json-default">
+			<action name="check" class="DaSe" method="search">
+				<result name="success">check.jsp</result>
+			</action>
+		</package>
+</struts>

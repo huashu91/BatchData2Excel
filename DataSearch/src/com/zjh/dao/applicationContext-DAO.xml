@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"  
+   	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+   						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+   						
+	<bean id="TagDAO" class="com.zjh.dao.TagDAO">  
+	        <property name="sessionFactory">  
+	            <ref bean="sessionFactory" />  
+	        </property>  
+	 </bean>
+	 <bean id="PointDAO" class="com.zjh.dao.PointDAO">  
+	        <property name="sessionFactory">  
+	            <ref bean="sessionFactory" />  
+	        </property>
+	        <property name="tagDao">
+	        	<ref bean="TagDAO"/>
+	        </property>  
+	  </bean>  
+
+</beans>
