@@ -1,0 +1,2 @@
+# BatchData2Excel
+在网页中通过位号查询离线数据库中点位数据，并导入为excel表格
