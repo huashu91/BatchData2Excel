@@ -1,0 +1,6 @@
+{
+  "name": "Batchdata2excel",
+  "tagline": "在网页中通过位号查询离线数据库中点位数据，并导入为excel表格",
+  "body": "# BatchData2Excel\r\n在网页中通过位号查询离线数据库中点位数据，并导入为excel表格\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
